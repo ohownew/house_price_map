@@ -11,7 +11,7 @@ import {onMounted, ref} from 'vue'
 
 
 onMounted(() => {
-    mapboxgl.accessToken = import.meta.env.MAPBOX_KEY;
+    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
     console.log(mapboxgl.accessToken);
     const map = new mapboxgl.Map({
         container: 'RealMap', // container ID
