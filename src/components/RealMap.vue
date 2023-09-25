@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="spaceMeasurement">
       <div class="chart" id="RealMap">yesok</div>
     </div>
@@ -33,4 +33,4 @@ onMounted(() => {
 .chart {
   height: 50vh;
 }
-</style>
+</style> -->
