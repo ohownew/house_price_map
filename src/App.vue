@@ -1,12 +1,12 @@
 <template>
+  <MapBoxMap />
   <Bar />
-  <EchartsMapBox />
 </template>
 
 <script setup>
 import Bar from './components/Bar.vue'
 // import RealMap from './components/RealMap.vue';
-import EchartsMapBox from './components/EchartsMapBox.vue';
+import MapBoxMap from './components/MapBoxMap.vue';
 
 </script>
 
