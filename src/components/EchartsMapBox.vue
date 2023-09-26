@@ -7,13 +7,6 @@ import * as echarts from 'echarts';
 import 'echarts/extension/bmap/bmap';
 import 'echarts-gl';
 import {onBeforeMount, onMounted, ref} from 'vue';
-// import VChart from 'vue-echarts';
-
-// onBeforeMount(() => {
-//     $.get('/examples/data/asset/geo/ksia-ext-plan-min.svg', function (svg) {
-//         echarts.registerMap('ksia-ext-plan', { svg: svg });
-//     })
-// })
 
 onMounted(() => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
@@ -47,21 +40,33 @@ onMounted(() => {
                 //     roam: true,
                 // },
                 series: {
-                    type: 'scatter',
-                    // coordinateSystem: 'geo',
+                    type: 'scatter3D',
+                    coordinateSystem: 'mapbox3D',
+                    // type: 'scatter',
+                    // coordinateSystem: 'bmap',
                     geoIndex: 0,
-                    symbolSize: 29,
-                    
+                    symbolSize: 10,
                     // symbolSize: function (params) {
                     //     return (params[2] / 100) * 15 + 5;
                     // },
-                    // itemStyle: {
-                    //     color: '#b02a02'
-                    // },
+                    zlevel: 1,
+                    label: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                        show: true
+                        }
+                    },
+                    itemStyle: {
+                        color: '#b02a02'
+                    },
                     // encode: {
                     //     tooltip: 2
                     // },
-                    data: [[114.0173420638, 22.6287103111],]//convertData(data)
+                    data: convertData(data) // [[114.0173420638, 22.6287103111],]//
                 }
             })
         );
