@@ -1,7 +1,7 @@
 <template>
     <div class="chart" id="DistrictTotal"></div>
     <div class="colname">
-        <el-radio-group v-model="radio1" size="large" @change="handleChange">
+        <el-radio-group v-model="radio1" size="large">
         <el-radio-button label="单位面积均价" />
         <el-radio-button label="在租小区量" />
         <el-radio-button label="在租房源量" />

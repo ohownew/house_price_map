@@ -1,5 +1,5 @@
 <template>
-    <div class="chart" id="CommunityPOI"></div>
+    <div class="chart" id="StreetTotal"></div>
     <div class="features">
         <el-table :data="tableData" style="width: 100%">
             <el-table-column prop="lyt" label="户型" />
@@ -30,6 +30,20 @@
 <script setup>
 import {onMounted, ref} from 'vue';
 const tableData = ref([]);
+const districts = [
+    ['罗湖区', 114.14312021034308, 22.577590531325097],
+    ['福田区', 114.0446201887346, 22.549203064656897],
+    ['南山区', 113.93615586602698, 22.553139483645754],
+    ['宝安区', 113.85728868757083, 22.68400030713536],
+    ['盐田区', 114.26608846307737, 22.59870987895339],
+    ['龙华区', 114.02979607735925, 22.68685416924557],
+    ['大鹏新区', 114.49796743711808, 22.57948354439653],
+    ['龙岗区', 114.20670288520662, 22.695592730801433],
+    ['光明区', 113.92647346606621, 22.76617659337744],
+    ['坪山区', 114.3572535468446, 22.69105985015741]
+];
+
+
 
 onMounted(() => {
     
@@ -41,7 +55,6 @@ onMounted(() => {
       center: [114.15,22.628710311083694], // starting position
       zoom: 10 // starting zoom
     });
-
 
     // $.ajaxSettings.async = false;
     $.get('/src/assets/zf_com_info.geojson', (zf_com_info) => {
