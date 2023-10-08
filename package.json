@@ -11,11 +11,15 @@
   "dependencies": {
     "echarts": "^5.4.3",
     "echarts-gl": "^2.0.9",
+    "element-plus": "^2.3.14",
     "vue": "^3.3.4",
-    "vue-echarts": "^6.6.1"
+    "vue-echarts": "^6.6.1",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.5"
   }
 }
